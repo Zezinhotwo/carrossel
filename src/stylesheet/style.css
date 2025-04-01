@@ -7,12 +7,50 @@
 .content-carrossel {
   background-color: rgb(0, 0, 0);
   width: 350px;
+  overflow: hidden;
+  height: 200px;
+}
+
+.carrossel-items {
+  position: relative;
   display: flex;
+  flex-direction: row;
   gap: 1em;
 }
 
+@keyframes next {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: 100px;
+  }
+}
+@keyframes back {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 200px;
+  }
+}
 .item {
+  position: relative;
   height: 100px;
   width: 100px;
   background-color: yellow;
+}
+
+.next {
+  animation-name: next;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.back {
+  animation-name: back;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }/*# sourceMappingURL=style.css.map */
